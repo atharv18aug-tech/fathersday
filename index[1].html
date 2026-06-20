@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Father's Day</title>
+<style>
+body{margin:0;background:#000;color:#d4af37;font-family:Arial,sans-serif;text-align:center;overflow-x:hidden}
+.hero{padding:60px 20px}
+h1{font-size:3em}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;padding:20px}
+.gallery img{width:100%;border-radius:18px;box-shadow:0 0 20px rgba(212,175,55,.5)}
+.letter{max-width:900px;margin:auto;padding:25px;line-height:1.8;background:#111;border-radius:20px}
+.heart{position:fixed;top:-20px;color:#ff4d6d;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh);opacity:0}}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>Happy Father's Day ❤️</h1>
+<p>With Love and Gratitude</p>
+</div>
+<div class="gallery">
+<img src="photo1.png"><img src="photo2.png"><img src="photo3.png"><img src="photo4.png"><img src="photo5.png">
+</div>
+<div class="letter">
+<h2>Dear Papa</h2>
+<p>Thank you for every sacrifice, every lesson, every moment of support, and every smile you brought into my life. Your strength inspires me, your guidance protects me, and your love gives me confidence. No matter how much I grow, I will always be grateful for having a father like you. Happy Father's Day to the best dad in the world. I love you and respect you more than words can express.</p>
+</div>
+<script>
+function createHeart(){
+ const h=document.createElement('div');
+ h.className='heart';
+ h.innerHTML='❤️';
+ h.style.left=Math.random()*100+'vw';
+ h.style.fontSize=(20+Math.random()*25)+'px';
+ h.style.animationDuration=(4+Math.random()*4)+'s';
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),8000);
+}
+setInterval(createHeart,250);
+</script>
+</body></html>
